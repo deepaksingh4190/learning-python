@@ -1,0 +1,45 @@
+system design is used to design the software.
+a software used to handle  the millions of users.
+it os fast , secure and reliable
+**example : to make instagram
+ Users register/login 
+
+ Photo upload 
+
+ Feed 
+
+ Like, comment and share
+
+ Search 
+ these all feature works together and crores of people uses to it
+
+ **the meaning of system design is to:
+ what is backend server?
+ how many server will be used in it?
+ how to design the database?
+ how to handle if crores of people are using the platform?
+
+ **explain with restraunt example
+ Entrance → Load Balancer
+
+Tables → Servers
+
+Menu → API
+
+Kitchen → Database
+
+Waiters → Service Layer
+
+Takeaway → CDN
+
+Online Booking → Asynchronous Queue
+
+**why system design is important:
+Job interviews (especially FAANG, startups)
+
+Scalable systems 
+
+Architecture decisions 
+
+Tech lead mandatory 
+

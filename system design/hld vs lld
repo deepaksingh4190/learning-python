@@ -1,0 +1,76 @@
+**High level design:
+1. focus : Overall system architecture, major components and their interactions
+2. audience : architect , senior engineer
+3. Abstraction Level : High-level (what and why)
+4. Audience: Project sponsors, senior management, architects
+5. Diagrams: Block Diagrams, Flow Diagrams
+6. Scale: System-level
+7. Timing: Early in SDLC, after requirements analysis
+8. Purpose: Scalability, performance, integration planning
+9. Simple Example: Instagram
+High-Level Design (HLD):
+Components: Web server, App server, DB, Cache, CDN, Load Balancer
+
+Technologies: Redis for caching, PostgreSQL for DB, Kafka for messaging
+
+Architecture Diagram (boxes & arrows)
+
+componets in hld: sytem parts(Login System, Photo Upload System)
+architect - which part is connected and how , which tech is used
+load balancer - devide the traffic in multiple servers
+includes data bases
+cache : Fast memory for repeat data (example: Redis)
+CDN : serve the image / video file to the user
+messaging queue : process the tasks one by one in a line
+
+
+
+**low level design: defines how the class made and what are attributes.
+class : python or java structure wher data and logic is present
+function : reuseable work code block
+attributes : data in class
+methods : function in class
+UML Diagram	: Visual chart where relation of class present
+ER Diagram: Entity-Relationship Diagram, database design 
+
+#example instagram
+  class User:
+    def __init__(self, user_id, username, email):
+        self.user_id = user_id
+        self.username = username
+        self.email = email
+
+1. focus : Detailed specifications for individual components, including algorithms and data structures
+2.abstraction : Detailed specifications for individual components, including algorithms and data structures
+3. audience : developers, coders, engineer
+4. timing : Later in SDLC, after HLD is complete
+
+
+**summary
+feature                            hld                                         lld
+
+focus                          overall structure                          internal details
+example                        how many modules                           class / functions
+diagram                        boxes and arrows                           classes / relation
+purpose                        scalability, technology choice             code level planning
+
+Real-Life Example:
+Pizza Delivery App
+
+HLD:
+
+Login system
+
+Menu system
+
+Order processing
+
+Payment gateway
+
+LLD:
+
+Pizza class: name, size, toppings
+
+place_order() function  code
+
+Database table for Orders

@@ -1,0 +1,33 @@
+**scalabiliy - to make the system big and more powerful
+to make the system more enhance to handle more users and traffic.
+types : 
+1 vertical scaling (scale-up) : make one server more powerful and give more functions and feature to it 
+example: increase RAM , CPU
+2. horizontal scaling (scale-out) : deploying more server
+
+**latency - time taken by respinse time
+client send reques - reply by server = time gap between this => Latency
+example: if we search anything in google , suppose it response result in 2 second the letancy=2
+fast system = low latency
+
+**throughput : how much work done by system in 1 second
+-how much request per seconds(RPS) and order per minute are handled
+example: flipkart manage 1000 order per second , throughput=1000ops/sec
+more throughput = powerful system
+
+**availability
+how much time system works - 24/7 available or down again & again
+Example:
+99% availability = every 100 minute there is 1 minute system down
+99.99% availability = every 10,000 minutes there is 1 minute system down
+downtime low and uptime more == high availability
+
+** Reliability 
+system should give same output if same input is repeated , without any error or crash
+if we give 1 order 10 times then successfully we get output 
+
+**consistency - every user see same data
+when user uploads photo --- another person see same photo
+example: 
+when i send some message on whatsapp and then i delete that message --- all peopke mobile should be sync
+

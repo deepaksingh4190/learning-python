@@ -1,0 +1,40 @@
+Monolithic:
+we add all feature in 1 codebase - login, cart, order, payment all are packed compactly
+example :
+making a mobile app
+in app.py you add all - login, signup, order, search 
+if there is bug in any of them , then whole system will be affected
+ Pros: development esy,testing fast,deployment easy(1 file upload)
+ cons: difficult to scale, 1 bug full feature crash, large codebase is difficult to handle,hard to check tech stack(all written in one language)
+
+Microservices Architecture:
+break the system into small small independent services , every service has its own  database,  code, deployment.
+example:
+Flipkart
+
+Login → one microservice
+
+Search → another
+
+Cart → another
+
+Payment → another
+if bug in payment system other will work properly
+
+pros:
+Easily scalable 
+
+Fast deployment 
+
+Failures isolated 
+
+Tech stack flexible 
+
+cons:
+Development complex 
+
+Data consistency tough 
+
+Network calls more
+
+Deployment & monitoring more difficult

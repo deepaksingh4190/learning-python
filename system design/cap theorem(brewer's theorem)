@@ -1,0 +1,16 @@
+it is a distributed system(multiple servers/machines) which maintain 2 qualities out of three
+1. c = consistancy  : every user get same data 
+2. a = availability : response to every request if there is old data or system is slow
+3. p = partition tolerence : if there is network fail in between server , then system should do some work
+
+Theorem rule :
+you only can acces 2 out of 3
+c+p = banking system(data should not be wrong)
+a+p = whatsapp(message go instantly, if update is late)
+c+a = practically impossible in network failure
+
+*real life example
+System	                                  Category (Approx)	                            Explanation
+MongoDB	                                        CP	                      Writes are consistent, but may become unavailable
+Cassandra	                                      AP	                      Always available, but might give stale data
+RDBMS (MySQL)	                             CA (non-distributed)	          Good consistency and availability if no partition

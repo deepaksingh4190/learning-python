@@ -1,0 +1,16 @@
+load balancer is a middle server which devides the incoming servers into multiple bckend servers.
+goal: no high load to single server , every server get equal requests and work
+*example:
+client -> load balncer -> backend servers
+when user open a website(send requests) load balncer decides that which server take this request
+*types of load balancer:
+round robin: send request turn by turn
+least connection: a server which have minimum request pending so that server will get request
+ip hash : request work on basis of ip address
+weighted round robin: a server which is more powerful that will get request
+* Popular Load Balancers:
+Tool	Use
+Nginx:	Lightweight, static content
+HAProxy:	popular for high traffic
+AWS ELB (Elastic Load Balancer):	Cloud-based, scalable
+Traefik , Envoy	: Modern microservice friendly

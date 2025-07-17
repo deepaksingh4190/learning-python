@@ -1,0 +1,50 @@
+Feature	                                        SQL (Relational DB)                             	NoSQL (Non-Relational DB)
+Data                                          Format	Tables (rows & columns)               	JSON, Key-Value, Documents, Graphs
+Schema	                                       Fixed (structured)	                                  Flexible schema (schema-less)
+Examples                                     	MySQL, PostgreSQL, Oracle	                         MongoDB, Cassandra, DynamoDB, Redis
+Best For	                                      Structured data (Bank, HR, E-Commerce)	              Flexible, huge data (Chat apps, Social media)
+Joins	                                           Supported	                                        Not always supported
+ACID compliance	                                     Strong	                                      Often eventually consistent
+
+ Use SQL when:
+
+Transactions is important(e.g. banking)
+
+Data structure is clear (e.g. users table)
+
+Use NoSQL when:
+
+need Fast performance at scale
+
+Structure flexible  (e.g. user profiles with changing fields)
+
+*indexes - system shortcut
+use for fast searching
+  example:
+SELECT * FROM users WHERE username = 'deepak'
+
+*replication - copy same data in multiple server
+Type	                                     Use
+Master-Slave	                  Writes on master, reads from slaves
+Multi-Master	                  Writes possible from multiple locations
+Read Replicas	                  Only for reading, load balancing
+
+helps in load balancing and high availability
+*sharding:
+when there is large data so deviding it to multiple database
+
+ * Normalization vs Denormalization
+Term	                                    Meaning	                                                    Example
+Normalization	                    splitting data for no duplication     	                 User table + Address table (seperated)
+Denormalization	                   combines data for fast acces	                          User + Address (in one row)
+"We normalize for consistency and denormalize for performance."
+
+  
+Term                                             	 Meaning
+SQL	                                       Structured, strong schema
+NoSQL                                     	Flexible, fast, scalable
+Index	                                     Fast search shortcut
+Replication	                               Copy of data on other servers
+Sharding	                               Data ko divide and distribute
+Normalization	                            Split data for clarity
+Denormalization                          	Combine data for speed

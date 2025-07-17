@@ -1,0 +1,39 @@
+cashing is a super fast storage where frequently accessed data are stored temporarily .  no need to go for again and again for slow databse or server
+*goal : speed up system by avoiding repeating heavy tasks
+*example:
+User open instagram feed
+
+App gets photos from server/databse first time(slow)
+
+then photos stored in local memory(cache)
+
+when user open again it shows that photos again instantly
+
+*Where Cache is Used:
+Location	                    Type	                                     Example
+Browser-side	             Local Cache	                            Static files (CSS, JS)
+Server-side	          In-Memory Cache	                             Redis, Memcached
+CDN Cache	              Near user	                                 Cloudflare, Akamai
+
+*Common Cache Strategies:
+Strategy	                                                        Explanation
+Read-Through	                                        Read comes from cache, if miss → fetch from DB & store in cache
+Write-Through                                         	Write goes to both DB and cache
+Write-Back (Lazy)	                                   Write only to cache, update DB later
+Cache Aside (Lazy loading)                        	App manually fetches from DB and stores to cache if not found
+
+ Cache Invalidation (BIG Interview Topic)
+Method	                                                                     Explanation
+Time-to-Live (TTL)	                                           cache auto expire after some time(eg: 10 min)
+Manual Invalidate	App                                           app manually clear the cache when it is updated
+Write-Through	                                                 db and cache both are updated together
+
+*cahce hit = data already in cache (fast)
+*cache miss = data not in cache (db call needed) = slow
+
+* Tools for Caching:
+Tool	                                        Use
+Redis	                          Fast in-memory key-value store
+Memcached	                      Lightweight caching for small data
+CDN (Cloudflare, Akamai)	      Image/video caching near user
+

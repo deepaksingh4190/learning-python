@@ -1,0 +1,25 @@
+content delivery network
+it is a global network service which serve the static content like (video,images,files) to the user through its near located server.
+ goal: speed up content delivery by reducing the physical distance
+##how it works:
+1. user request for content(images,video)
+2. cdn check that:
+- present in cache? -> send it fast(cashe hit)
+- not present - get from origin and store it and then send it(cashe miss)
+3. next time content available on local cdn node -> super fast
+
+##common use:
+1.website loading : image,css,js files get fast
+2.video streaming : netflix,youtube use cdn for video playback
+3.E-commerce site : product images , thumbnails serve fats
+4. software downloads: app install files(APK,EXE)
+
+##benefits of cdn
+1. low latency - serve data to user by near local server
+2. scalability - no load to one server
+3. reliability - if one cdn is down then another handle it
+4. security - cdn DDoS provide protection
+5. fast load time - seo and user experience both are better
+
+#popular cdn provider:
+Cloudflare	,Akamai	,Amazon ,Google CDN

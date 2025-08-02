@@ -1,0 +1,15 @@
+Linear Search vs Binary Search
+Feature	                                       Linear Search	                                                               Binary Search
+Works on Sorted Array	                          ❌ No                                                                 	✅ Yes, must be sorted
+Speed (Time Complexity)                      	O(n) – slow for large data	                                             O(log n) – super fast 🚀
+Logic	                                     Check every element one by one                                           	Divide array in half every time
+Extra Logic Needed	                           ❌ Simple loop                                                     	✅ Requires start, end, mid logic
+Worst Case	                           Last element or not found	                                                   Halves the array each time
+Best Case	                                 First element                                                                    	Middle element
+
+ Real-World Use Cases:
+Task	                                                      Best Search Method
+Roll number search in sorted list	                      ✅ Binary Search
+Username search in unordered file	                      ✅ Linear Search
+Search product in sorted price list	                        ✅ Binary Search
+Search word in jumbled dictionary	                         ❌ Binary won't work → Linear

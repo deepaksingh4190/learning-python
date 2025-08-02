@@ -1,0 +1,72 @@
+#why we use:
+- when our app become big like (instagram,flipkart) then single database cant handle it
+- lagging in system
+
+##replication
+- copying same data to multiple databse server.
+
+#Types of Replication:
+Type	                                                                      Description
+Master-Slave	                                                  one master writes (write), slaves read them (read-only)
+Master-Master	                                                  both server can write
+Read Replicas	                                                  Mostly read-heavy apps (e.g., YouTube, blog sites)
+
+#         Client
+           |
+        Load Balancer
+           |
+         Master DB
+        /    |    \
+   Slave1  Slave2  Slave3
+   (Read)  (Read)  (Read)
+
+#Use Cases:
+Read-heavy systems (e.g., news apps, search engines)
+
+Failover support (if master fails ,the read-only slave able to work)
+
+#Problems with Replication:
+Lag between master and slave
+
+Write bottleneck at master
+
+Conflict in master-master (if both update same row)
+
+#sharding:
+break the data and share it to multiple database. every shard have its specific database server
+#Example:
+Users table:
+
+A–M → DB1
+
+N–Z → DB2
+#           Load Balancer
+             /      \
+      Shard1 DB     Shard2 DB
+     (A-M Users)    (N-Z Users)
+
+# Sharding Keys Examples:
+User ID
+
+Region/Country
+
+Time (for logs or historical data)
+
+#Use Cases:
+Write-heavy systems (e.g., Twitter, banking systems)
+
+When DB is too big for a single server
+
+# Problems with Sharding:
+Issue                                                             	Description
+Hotspot	                                                     If many users fall in same shard
+Joins	                                                       Can't easily join data from different shards
+Resharding	                                                 Redistributing data is complex if traffic changes
+
+# SHARDING vs REPLICATION – Key Difference
+
+Aspect                     	Sharding	                                Replication
+Purpose	                  Scalability (horizontally)	             High availability & reads
+Data	                    Split across DBs	                       Same data on all DBs
+Failure                 	If 1 shard fails → partial data loss	   Failover to replicas
+Scaling	                  Scale by splitting data                	 Scale by copying data

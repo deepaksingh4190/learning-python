@@ -24,8 +24,8 @@ print(arr)  #output = [43,54,44,33,22,12]
 # Method 2 (manual)
 rev = []
 for i in range(len(arr)-1, -1, -1):
-  rev.append(arr[i])
-print(arr)  #output: [43, 54, 44, 33, 22, 12]
+    rev.append(arr[i])
+print(rev)  #output: [43, 54, 44, 33, 22, 12]
 
 # Q3. Sum of All Elements
 arr = [12,2,34,56,67]
